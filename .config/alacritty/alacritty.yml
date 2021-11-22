@@ -19,18 +19,18 @@ scrolling:
   history: 10000
   multiplier: 3
 font:
-  normal:
-    family: FuraMono Nerd Font Mono
-    style: Regular
-  bold:
-    family: FuraMono Nerd Font Mono
-    style: Bold
-  italic:
-    family: FuraMono Nerd Font Mono
-    style: Italic
+#  normal:
+#    family: FuraMono Nerd Font Mono
+#    style: Regular
+#  bold:
+#    family: FuraMono Nerd Font Mono
+#    style: Bold
+#  italic:
+#    family: FuraMono Nerd Font Mono
+#    style: Italic
   size: 16.0
-
-hide_cursor_when_typing: true
+mouse:
+  hide_when_typing: true
 draw_bold_text_with_bright_colors: true
 colors:
   primary:
@@ -57,7 +57,10 @@ colors:
 shell:
   program: /bin/zsh
   args:
-    - --login
+    - -l
+    - -c
+    - "tmux -f ${TMUX_CONFIG}"
+      #- "tmux -f /Users/lars/.config/tmux/tmux.conf"
 working_directory: none
 
 live_config_reload: true
